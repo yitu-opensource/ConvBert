@@ -33,7 +33,7 @@ See `configure_pretraining.py` for the details of the supported hyperparameters.
 
 ### Fine-tining
 
-We gives the instruction to fine-tune a pre-trained medium-small sized ConvBERT model (17M parameters) on GLUE . See our paper for more details on model performance. Pre-trained model can be found [here](https://drive.google.com/drive/folders/1pSsPcQrGXyt1FB45clALUQf-WTNAbUQa?usp=sharing). You can also download it from [baidu cloud](https://pan.baidu.com/s/1jPo0e94p2dB8UBz33QuMrQ) with extraction code m9d2.
+We gives the instruction to fine-tune a pre-trained medium-small sized ConvBERT model (17M parameters) on GLUE. You can refer to the Google Colab notebook for a [quick example](https://colab.research.google.com/drive/1WIu2Cc1C8E7ayZBzEmpfd5sXOhe7Ehhz?usp=sharing). See our paper for more details on model performance. Pre-trained model can be found [here](https://drive.google.com/drive/folders/1pSsPcQrGXyt1FB45clALUQf-WTNAbUQa?usp=sharing). (You can also download it from [baidu cloud](https://pan.baidu.com/s/1jPo0e94p2dB8UBz33QuMrQ) with extraction code m9d2.)
 
 To evaluate the performance on GLUE, you can download the GLUE data by running
 ```bash
