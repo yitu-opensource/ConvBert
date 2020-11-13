@@ -15,7 +15,7 @@ In this repo, we introduce a new architecture **ConvBERT** for pre-training base
 
 ### Pre-training
 
-These instructions pre-train a pre-trained medium-small sized ConvBERT model (17M parameters)  using the [OpenWebText](https://skylion007.github.io/OpenWebTextCorpus/) corpus.
+These instructions pre-train a medium-small sized ConvBERT model (17M parameters)  using the [OpenWebText](https://skylion007.github.io/OpenWebTextCorpus/) corpus.
 
 To build the tf-record and pre-train the model, download the [OpenWebText](https://skylion007.github.io/OpenWebTextCorpus/) corpus (12G) and **setup your data directory** in `build_data.sh` and `pretrain.sh`. Then run
 
