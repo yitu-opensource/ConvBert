@@ -55,3 +55,14 @@ If you find this repo helpful, please consider cite
   volume={abs/2008.02496}
 }
 ```
+# References
+
+Here are some great resources we benefit:
+
+Pre-training task: [Replaced token detection task](https://github.com/google-research/electra) from [ELECTRA](https://openreview.net/pdf?id=r1xMH1BtvB)
+
+Dynamic convolution: [Implementation](https://github.com/pytorch/fairseq/blob/265791b727b664d4d7da3abd918a3f6fb70d7337/fairseq/modules/lightconv_layer/lightconv_layer.py#L75) from [Pay Less Attention with Lightweight and Dynamic Convolutions](https://openreview.net/pdf?id=SkVhlh09tX)
+
+Dataset: [OpenWebText](https://skylion007.github.io/OpenWebTextCorpus/) from [Language Models are Unsupervised Multitask Learners](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf)
+
+Resource: tpu provided by [TFRC program](https://www.tensorflow.org/tfrc).
