@@ -103,11 +103,12 @@ class ExampleWriter(object):
   """Writes pre-training examples to disk."""
 
   def __init__(self, job_id, vocab_file, output_dir, max_seq_length,
-               num_jobs, blanks_separate_docs, num_out_files=1000):
+               num_jobs, blanks_separate_docs, num_out_files=1000, strip_accents=True):
     self._blanks_separate_docs = blanks_separate_docs
     tokenizer = tokenization.FullTokenizer(
         vocab_file=vocab_file,
-        do_lower_case=True)
+        do_lower_case=True,
+        strip_accents=strip_accents)
     self._example_builder = ExampleBuilder(tokenizer, max_seq_length)
     self._writers = []
     for i in range(num_out_files):
@@ -154,7 +155,8 @@ def write_examples(job_id, args):
       output_dir=args.output_dir,
       max_seq_length=args.max_seq_length,
       num_jobs=args.num_processes,
-      blanks_separate_docs=args.blanks_separate_docs
+      blanks_separate_docs=args.blanks_separate_docs,
+      strip_accents=args.strip_accents,
   )
   log("Writing tf examples")
   fnames = sorted(tf.io.gfile.listdir(args.corpus_dir))
@@ -189,6 +191,14 @@ def main():
                       help="Parallelize across multiple processes.")
   parser.add_argument("--blanks-separate-docs", default=True, type=bool,
                       help="Whether blank lines indicate document boundaries.")
+
+  # toggle strip-accents and set default to True which is the default behavior
+  parser.add_argument("--do-strip-accents", dest='strip_accents',
+                      action='store_true', help="Strip accents (default).")
+  parser.add_argument("--no-strip-accents", dest='strip_accents',
+                      action='store_false', help="Don't strip accents.")
+  parser.set_defaults(strip_accents=True)
+
   args = parser.parse_args()
 
   utils.rmkdir(args.output_dir)
