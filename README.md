@@ -47,12 +47,16 @@ And you can test different tasks by changing configs in `finetune.sh`.
 
 If you find this repo helpful, please consider cite
 ```bibtex
-@article{Jiang2020ConvBERT,
-  title={ConvBERT: Improving BERT with Span-based Dynamic Convolution},
-  author={Zi-Hang Jiang and Weihao Yu and Daquan Zhou and Y. Chen and Jiashi Feng and S. Yan},
-  journal={ArXiv},
-  year={2020},
-  volume={abs/2008.02496}
+@inproceedings{NEURIPS2020_96da2f59,
+ author = {Jiang, Zi-Hang and Yu, Weihao and Zhou, Daquan and Chen, Yunpeng and Feng, Jiashi and Yan, Shuicheng},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
+ pages = {12837--12848},
+ publisher = {Curran Associates, Inc.},
+ title = {ConvBERT: Improving BERT with Span-based Dynamic Convolution},
+ url = {https://proceedings.neurips.cc/paper/2020/file/96da2f590cd7246bbde0051047b0d6f7-Paper.pdf},
+ volume = {33},
+ year = {2020}
 }
 ```
 # References
